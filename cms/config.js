@@ -11,6 +11,7 @@ export default {
     {
       name: 'pages',
       label: 'Pages',
+      create: true,
       files: [
         {
           label: 'Home',
@@ -39,28 +40,25 @@ export default {
     {
       name: 'press-page',
       label: 'Press Page',
-      files: [
+      create: true,
+      slug: "{{slug}}",
+      folder: "content/press",
+      extension: "json",
+      fields: [
         {
-          label: 'Press',
-          name: 'Press',
-          file: 'content/press/press.json',
-          fields: [
-            {
-              label: 'Press Title',
-              name: 'press_title',
-              widget: 'string',
-            },
-            {
-              label: 'Press Description',
-              name: 'press_description',
-              widget: 'markdown',
-            },
-            {
-              label: 'Press Image',
-              name: 'press_image',
-              widget: 'image',
-            },
-          ],
+          label: 'Press Title',
+          name: 'press_title',
+          widget: 'string',
+        },
+        {
+          label: 'Press Description',
+          name: 'press_description',
+          widget: 'markdown',
+        },
+        {
+          label: 'Press Image',
+          name: 'press_image',
+          widget: 'image',
         },
       ],
     },
